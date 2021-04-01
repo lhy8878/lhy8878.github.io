@@ -468,22 +468,23 @@
 <html>
 <head>
 	  <meta charset='utf-8'>
+	  <script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("必须填写姓名！");
+    return false;
+  }
+}
+</script>
 	<title></title>
 </head>
 <body>
-<h1>琴棋书画不会，洗衣做饭嫌累1</h1>
-<style>
-h1{ font-family:"webfont" !important;}
-@font-face {
-  font-family: 'webfont';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_lfga3bzzcgr.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_lfga3bzzcgr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_lfga3bzzcgr.woff2') format('woff2'),
-  url('http://at.alicdn.com/t/webfont_lfga3bzzcgr.woff') format('woff'), /* chrome、firefox */
-  url('http://at.alicdn.com/t/webfont_lfga3bzzcgr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_lfga3bzzcgr.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
-}
+<h2>just a form</h2>
+<form name="formTest" action="/test" method="post"  enctype="application/x-www-form-urlencoded" >
+    <input type="text" name="textTest"  value=" "/>
+    <button>提交</button> 
+</form>
 </style>
 </body>
 </html>
@@ -512,7 +513,7 @@ h1{ font-family:"webfont" !important;}
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/01/untitled/">http://example.com/2021/04/01/untitled/</a>
+                    <a href="http://example.com/2021/04/01/form%20test/">http://example.com/2021/04/01/form%20test/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,12 +718,11 @@ h1{ font-family:"webfont" !important;}
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/04/01/untitled/">
+                <a href="/2021/04/01/form/">
                     <div class="card-image">
                         
                         
@@ -738,9 +738,9 @@ h1{ font-family:"webfont" !important;}
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -749,7 +749,6 @@ h1{ font-family:"webfont" !important;}
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
